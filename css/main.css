@@ -10,4 +10,44 @@
     -moz-border-radius: 5px 5px 0 0;
     -ms-border-radius: 5px 5px 0 0;
     -o-border-radius: 5px 5px 0 0;
+    color: #fff;
 }
+.header a{
+    color:#bcbdc7;
+    transition: all 0.3s linear;
+}
+.topinfo{
+    border-bottom: 1px solid #303e4f;
+    display: flex;
+    justify-content: space-between;
+}
+.accountlist{
+    display: flex;
+    list-style: none;
+}
+.accountlistitem{
+        margin: 0 10px 0 5px;
+}
+.accountlistlink{
+    display: block;
+    padding: 5px 15px;
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+}
+.accountlistlink:hover{
+    color: #fff;
+}
+.accountlistlink>i{
+    padding-left: 4px;
+}
+.languages{
+    padding: 15px 0 0 10px;
+}
+.fa-icon{
+    width: 20px;
+    vertical-align: middle;
+}
+
