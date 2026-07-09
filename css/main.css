@@ -1,6 +1,7 @@
 .wrapper{
     width : 90%;
     margin: 10px auto;
+    box-shadow: 0 0 10px 0 silver;
 }
 /*header */
 .header{
@@ -47,6 +48,97 @@
 .languages{
     padding: 15px 0 0 10px;
 }
+
+.lang-dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+.lang-selected{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 10px;
+    background-color: transparent;
+    border: 1px solid #303e4f;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.lang-selected:hover{
+    border-color: #f4a137;
+}
+
+.lang-arrow{
+    font-size: 0.7em;
+    margin-right: 4px;
+    transition: transform 0.3s ease;
+}
+
+.lang-dropdown:hover .lang-arrow{
+    transform: rotate(180deg);
+}
+
+.lang-options{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    min-width: 140px;
+    background-color: #232f3e;
+    border: 1px solid #303e4f;
+    border-radius: 4px;
+    list-style: none;
+    margin: 5px 0 0 0;
+    padding: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-5px);
+    transition: all 0.25s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.lang-dropdown:hover .lang-options{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.lang-option{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    color: #bcbdc7;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: all 0.2s linear;
+    border-bottom: 1px solid #303e4f;
+}
+
+.lang-option:last-child{
+    border-bottom: none;
+}
+
+.lang-option:hover{
+    color: #fff;
+    background-color: #303e4f;
+}
+
+.lang-option.active{
+    color: #f4a137;
+}
+
+.lang-option .fa-icon{
+    width: 20px;
+    height: 14px;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
 .fa-icon{
     width: 20px;
     vertical-align: middle;
@@ -318,4 +410,95 @@
     font-size: 0.9em;
     font-weight: bold;
     margin: 0;
+}
+
+/* ====== Image Slider ====== */
+.l_ads{
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.l_ads img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    -webkit-transition: opacity 0.8s ease-in-out;
+    -moz-transition: opacity 0.8s ease-in-out;
+    -ms-transition: opacity 0.8s ease-in-out;
+    -o-transition: opacity 0.8s ease-in-out;
+}
+
+.l_ads img.active{
+    opacity: 1;
+}
+
+.slider-dots{
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.slider-dot{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.slider-dot.active{
+    background-color: #f4a137;
+    transform: scale(1.2);
+}
+
+/*main*/
+.main {
+    background-color: #fff;
+}
+.slider{
+    display: flex;
+    height: 422px;
+    padding: 10px;
+}
+.r_ads{
+    width: 25%;
+    margin-left: 10px;
+}
+.l_ads{
+    flex-grow: 1;
+}
+.r_ads img , .l_ads img{
+    width: 100%;
+    height: 100%;
+}
+.topproduct{
+    display: flex;
+    background-color: silver;
+}
+.topproductitem{
+    flex-grow: 1;
+    display: flex;
+    padding: 10px;
+}
+.topproductimage img{
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    padding-left: 10px;
+}
+.topproductinfo{
+    align-self: center;
 }

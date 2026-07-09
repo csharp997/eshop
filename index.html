@@ -9,7 +9,9 @@
     <link href="https://fonts.cdnfonts.com/css/iranian-sans" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <base target="_blank">
-<base target="_blank">
+    <base target="_blank">
+    <base target="_blank">
+    <base target="_blank">
 <base target="_blank">
 <base target="_blank">
 </head>
@@ -30,7 +32,23 @@
                 </li>
             </ul>
             <div class="languages">
-                <img class="fa-icon" src="images/icons/iran.png" alt="persian language"> فارسی
+                <div class="lang-dropdown">
+                    <div class="lang-selected">
+                        <img class="fa-icon" src="images/icons/iran.png" alt="persian language">
+                        <span>فارسی</span>
+                        <i class="fas fa-chevron-down lang-arrow"></i>
+                    </div>
+                    <ul class="lang-options">
+                        <li class="lang-option active" data-value="fa">
+                            <img class="fa-icon" src="images/icons/iran.png" alt="persian language">
+                            <span>فارسی</span>
+                        </li>
+                        <li class="lang-option" data-value="en">
+                            <img class="fa-icon" src="images/icons/uk.png" alt="english language">
+                            <span>English</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
         <section class="header-info">
@@ -330,8 +348,68 @@
             </ul>
         </nav>
     </header>
-    <main></main>
+    <main class="main">
+        <section class="slider">
+            <div class="r_ads">
+                <img src="images/v3-banner-header.png" alt="r_ads">
+            </div>
+            <div class="l_ads">
+                <img src="images/v2-slide1.jpg" alt="l_ads" class="active">
+                <img src="images/v2-slide2.jpg" alt="l_ads">
+                <img src="images/v2-slide3.jpg" alt="l_ads">
+                <div class="slider-dots">
+                    <span class="slider-dot active" data-index="0"></span>
+                    <span class="slider-dot" data-index="1"></span>
+                    <span class="slider-dot" data-index="2"></span>
+                </div>
+            </div>
+        </section>
+        <section class="topproduct">
+            <div class="topproductitem">
+                <div class="topproductimage">
+                    <img src="images/cat1-id12.jpg" alt="shoes1">
+                </div>
+                <div class="topproductinfo">کفش
+                    <br>
+                یک کفش خوب
+                <br>
+                <a href="#">خرید >></a>
+                </div>
+
+            </div>
+            <div class="topproductitem">
+                                <div class="topproductimage">
+                    <img src="images/cat2-id12.jpg" alt="shoes1">
+                </div>
+                <div class="topproductinfo">کفش
+                    <br>
+                یک کفش خوب
+                <br>
+                <a href="#">خرید >></a>
+                </div>
+
+            </div>
+            </div>
+            <div class="topproductitem">
+                                <div class="topproductimage">
+                    <img src="images/cat3-id12.jpg" alt="shoes1">
+                </div>
+                <div class="topproductinfo">کفش
+                    <br>
+                یک کفش خوب
+                <br>
+                <a href="#">خرید >></a>
+                </div>
+
+            </div>
+            </div>
+        </section>
+    </main>
     <footer></footer>
-   </section> 
+</section> 
+
+<script src="script.js">
+   
+</script>
 </body>
 </html>
