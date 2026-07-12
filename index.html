@@ -631,89 +631,327 @@
             </div>
         </div>
     </div>
+    <section class="banner">
+        <div class="overly_image">
+            <img src="images/image3-id11.jpg" alt="banner">
+        </div>
+    </section>
+
+    <div class="container">
+  <div class="section-header">
+    <h2 class="section-title">تازه واردها</h2>
+    <div class="nav-tabs">
+      <button class="nav-tab active" data-tab="tab1">الکترونیک</button>
+      <button class="nav-tab" data-tab="tab2">ورزش و فضای باز</button>
+      <button class="nav-tab" data-tab="tab3">جواهرات و ساعت</button>
+    </div>
+    <div class="nav-arrows">
+      <button class="arrow-btn" id="prevBtn">&#10095;</button>
+      <button class="arrow-btn" id="nextBtn">&#10094;</button>
+    </div>
+  </div>
+  
+  <div class="carousel-wrapper">
+    
+    <!-- Tab 1: Electronics -->
+    <div class="tab-panel active" id="tab1">
+      <div class="products-track" data-track="tab1">
+        <div class="product-card">
+          <span class="badge discount">-10%</span>
+          <div class="product-image">
+            <img class="img-default" src="images/b5.jpg" alt="کیف ویدکی">
+            <img class="img-hover" src="images/B10.jpg" alt="کیف ویدکی - hover">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">کیف ویدکی </h3>
+            <div class="rating">
+              <span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star empty">&#9733;</span><span class="star empty">&#9733;</span>
+            </div>
+            <div class="price-section">
+              <div class="old-price">۵۵,۰۰۰,۰۰۰ تومان</div>
+              <div class="current-price">۵۰,۰۰۰,۰۰۰ <span class="currency">تومان</span></div>
+            </div>
+            <div class="product-actions">
+              <button class="btn-add-cart" onclick="addToCart(this)"><span>&#128722;</span> افزودن به سبد خرید</button>
+              <button class="btn-wishlist" onclick="toggleWishlist(this)">&#9825;</button>
+            </div>
+            <button class="btn-compare" onclick="addToCompare(this)">&#8644;</button>
+          </div>
+        </div>
+        
+        <div class="product-card">
+          <span class="badge discount">-15%</span>
+          <div class="product-image">
+            <img class="img-default" src="images/J9-270x270.jpg" alt="گردنبند">
+            <img class="img-hover" src="images/J5.jpg" alt="'گردنبند' - hover">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">گردنبند </h3>
+            <div class="rating">
+              <span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span>
+            </div>
+            <div class="price-section">
+              <div class="old-price">۲,۵۰۰,۰۰۰ تومان</div>
+              <div class="current-price">۲,۱۲۵,۰۰۰ <span class="currency">تومان</span></div>
+            </div>
+            <div class="product-actions">
+              <button class="btn-add-cart" onclick="addToCart(this)"><span>&#128722;</span> افزودن به سبد خرید</button>
+              <button class="btn-wishlist" onclick="toggleWishlist(this)">&#9825;</button>
+            </div>
+            <button class="btn-compare" onclick="addToCompare(this)">&#8644;</button>
+          </div>
+        </div>
+        
+        <div class="product-card">
+          <span class="badge discount">-5%</span>
+          <div class="product-image">
+            <img class="img-default" src="images/m1.jpg" alt="لوازم آرایشی">
+            <img class="img-hover" src="images/m3.jpg" alt="لوازم آرایشی - hover">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">لوازم آرایشی </h3>
+            <div class="rating">
+              <span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star empty">&#9733;</span>
+            </div>
+            <div class="price-section">
+              <div class="old-price">۱۵,۰۰۰,۰۰۰ تومان</div>
+              <div class="current-price">۱۴,۲۵۰,۰۰۰ <span class="currency">تومان</span></div>
+            </div>
+            <div class="product-actions">
+              <button class="btn-add-cart" onclick="addToCart(this)"><span>&#128722;</span> افزودن به سبد خرید</button>
+              <button class="btn-wishlist" onclick="toggleWishlist(this)">&#9825;</button>
+            </div>
+            <button class="btn-compare" onclick="addToCompare(this)">&#8644;</button>
+          </div>
+        </div>
+        
+        <div class="product-card">
+          <span class="badge new">جدید</span>
+          <div class="product-image">
+            <img class="img-default" src="images/B10.jpg" alt="کیف چرم">
+            <img class="img-hover" src="images/B9.jpg" alt="کیف چرم  - hover">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">کیف چرم </h3>
+            <div class="rating">
+              <span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star empty">&#9733;</span>
+            </div>
+            <div class="price-section">
+              <div class="current-price">۴۵,۰۰۰,۰۰۰ <span class="currency">تومان</span></div>
+            </div>
+            <div class="product-actions">
+              <button class="btn-add-cart" onclick="addToCart(this)"><span>&#128722;</span> افزودن به سبد خرید</button>
+              <button class="btn-wishlist" onclick="toggleWishlist(this)">&#9825;</button>
+            </div>
+            <button class="btn-compare" onclick="addToCompare(this)">&#8644;</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Tab 2: Sports -->
+    <div class="tab-panel" id="tab2">
+      <div class="products-track" data-track="tab2">
+        <div class="product-card">
+          <span class="badge discount">-20%</span>
+          <div class="product-image">
+            <img class="img-default" src="images/B10.jpg" alt="کیف ">
+            <img class="img-hover" src="images/B9.jpg" alt="کیف - hover">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">کیف  </h3>
+            <div class="rating">
+              <span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star empty">&#9733;</span>
+            </div>
+            <div class="price-section">
+              <div class="old-price">۱,۲۰۰,۰۰۰ تومان</div>
+              <div class="current-price">۹۶۰,۰۰۰ <span class="currency">تومان</span></div>
+            </div>
+            <div class="product-actions">
+              <button class="btn-add-cart" onclick="addToCart(this)"><span>&#128722;</span> افزودن به سبد خرید</button>
+              <button class="btn-wishlist" onclick="toggleWishlist(this)">&#9825;</button>
+            </div>
+            <button class="btn-compare" onclick="addToCompare(this)">&#8644;</button>
+          </div>
+        </div>
+        
+        <div class="product-card">
+          <span class="badge new">جدید</span>
+          <div class="product-image">
+            <img class="img-default" src="images/m1.jpg" alt="لوازم آرایشی">
+            <img class="img-hover" src="images/m3.jpg" alt="لوازم آرایشی - hover">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">لوازم آرایشی </h3>
+            <div class="rating">
+              <span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span>
+            </div>
+            <div class="price-section">
+              <div class="current-price">۳۵۰,۰۰۰ <span class="currency">تومان</span></div>
+            </div>
+            <div class="product-actions">
+              <button class="btn-add-cart" onclick="addToCart(this)"><span>&#128722;</span> افزودن به سبد خرید</button>
+              <button class="btn-wishlist" onclick="toggleWishlist(this)">&#9825;</button>
+            </div>
+            <button class="btn-compare" onclick="addToCompare(this)">&#8644;</button>
+          </div>
+        </div>
+        
+        <div class="product-card">
+          <span class="badge discount">-10%</span>
+          <div class="product-image">
+            <img class="img-default" src="images/B5.jpg" alt="کیف چرم">
+            <img class="img-hover" src="images/B9.jpg" alt="کیف چرم - hover">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">کیف چرم</h3>
+            <div class="rating">
+              <span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star empty">&#9733;</span><span class="star empty">&#9733;</span>
+            </div>
+            <div class="price-section">
+              <div class="old-price">۸,۰۰۰,۰۰۰ تومان</div>
+              <div class="current-price">۷,۲۰۰,۰۰۰ <span class="currency">تومان</span></div>
+            </div>
+            <div class="product-actions">
+              <button class="btn-add-cart" onclick="addToCart(this)"><span>&#128722;</span> افزودن به سبد خرید</button>
+              <button class="btn-wishlist" onclick="toggleWishlist(this)">&#9825;</button>
+            </div>
+            <button class="btn-compare" onclick="addToCompare(this)">&#8644;</button>
+          </div>
+        </div>
+        
+        <div class="product-card">
+          <span class="badge discount">-15%</span>
+          <div class="product-image">
+            <img class="img-default" src="images/E3.jpg" alt="مانیتور">
+            <img class="img-hover" src="images/E3.jpg" alt="مانیتور - hover">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">مانیتور   </h3>
+            <div class="rating">
+              <span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star empty">&#9733;</span>
+            </div>
+            <div class="price-section">
+              <div class="old-price">۲,۰۰۰,۰۰۰ تومان</div>
+              <div class="current-price">۱,۷۰۰,۰۰۰ <span class="currency">تومان</span></div>
+            </div>
+            <div class="product-actions">
+              <button class="btn-add-cart" onclick="addToCart(this)"><span>&#128722;</span> افزودن به سبد خرید</button>
+              <button class="btn-wishlist" onclick="toggleWishlist(this)">&#9825;</button>
+            </div>
+            <button class="btn-compare" onclick="addToCompare(this)">&#8644;</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Tab 3: Jewelry -->
+    <div class="tab-panel" id="tab3">
+      <div class="products-track" data-track="tab3">
+        <div class="product-card">
+          <span class="badge discount">-10%</span>
+          <div class="product-image">
+            <img class="img-default" src="images/m1.jpg" alt="لوازم  آرایشی">
+            <img class="img-hover" src="images/m3.jpg" alt="لوازم آرایشی - hover">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">گردنبند ماه</h3>
+            <div class="rating">
+              <span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star empty">&#9733;</span><span class="star empty">&#9733;</span>
+            </div>
+            <div class="price-section">
+              <div class="old-price">۵۵,۰۰۰ تومان</div>
+              <div class="current-price">۵۰,۰۰۰ <span class="currency">تومان</span></div>
+            </div>
+            <div class="product-actions">
+              <button class="btn-add-cart" onclick="addToCart(this)"><span>&#128722;</span> افزودن به سبد خرید</button>
+              <button class="btn-wishlist" onclick="toggleWishlist(this)">&#9825;</button>
+            </div>
+            <button class="btn-compare" onclick="addToCompare(this)">&#8644;</button>
+          </div>
+        </div>
+        
+        <div class="product-card">
+          <span class="badge discount">-10%</span>
+          <div class="product-image">
+            <img class="img-default" src="images/J9-270x270.jpg" alt="گردنبند قلب">
+            <img class="img-hover" src="images/J5.jpg" alt="گردنبند قلب - hover">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">گردنبند قلب</h3>
+            <div class="rating">
+              <span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star empty">&#9733;</span>
+            </div>
+            <div class="price-section">
+              <div class="old-price">۵۵,۰۰۰ تومان</div>
+              <div class="current-price">۵۰,۰۰۰ <span class="currency">تومان</span></div>
+            </div>
+            <div class="product-actions">
+              <button class="btn-add-cart" onclick="addToCart(this)"><span>&#128722;</span> افزودن به سبد خرید</button>
+              <button class="btn-wishlist" onclick="toggleWishlist(this)">&#9825;</button>
+            </div>
+            <button class="btn-compare" onclick="addToCompare(this)">&#8644;</button>
+          </div>
+        </div>
+        
+        <div class="product-card">
+          <span class="badge discount">-20%</span>
+          <div class="product-image">
+            <img class="img-default" src="images/J5.jpg" alt="گردنبند نقره">
+            <img class="img-hover" src="images/J9-270x270.jpg" alt="گردنبند  نقره- hover">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">گردنبند نقره</h3>
+            <div class="rating">
+              <span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star empty">&#9733;</span>
+            </div>
+            <div class="price-section">
+              <div class="old-price">۴۵۰,۰۰۰ تومان</div>
+              <div class="current-price">۳۶۰,۰۰۰ <span class="currency">تومان</span></div>
+            </div>
+            <div class="product-actions">
+              <button class="btn-add-cart" onclick="addToCart(this)"><span>&#128722;</span> افزودن به سبد خرید</button>
+              <button class="btn-wishlist" onclick="toggleWishlist(this)">&#9825;</button>
+            </div>
+            <button class="btn-compare" onclick="addToCompare(this)">&#8644;</button>
+          </div>
+        </div>
+        
+        <div class="product-card">
+          <span class="badge new">جدید</span>
+          <div class="product-image">
+            <img class="img-default" src="images/e11.jpg" alt="لپ تاپ">
+            <img class="img-hover" src="images/e3.jpg" alt="لپ تاپ - hover">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">لپ تاپ  </h3>
+            <div class="rating">
+              <span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star empty">&#9733;</span><span class="star empty">&#9733;</span>
+            </div>
+            <div class="price-section">
+              <div class="current-price">۳۴۵,۰۰۰ <span class="currency">تومان</span></div>
+            </div>
+            <div class="product-actions">
+              <button class="btn-add-cart" onclick="addToCart(this)"><span>&#128722;</span> افزودن به سبد خرید</button>
+              <button class="btn-wishlist" onclick="toggleWishlist(this)">&#9825;</button>
+            </div>
+            <button class="btn-compare" onclick="addToCompare(this)">&#8644;</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+section.collections
 </main>
     <footer></footer>
 </section> 
 
-<script>
-        // ====== Tab Switching ======
-        const tabBtns = document.querySelectorAll('.tab-btn');
-        const tabContents = document.querySelectorAll('.tab-content');
-        let currentTab = 0;
-
-        function switchTab(index) {
-            tabBtns.forEach(btn => btn.classList.remove('active'));
-            tabContents.forEach(content => content.classList.remove('active'));
-            tabBtns[index].classList.add('active');
-            tabContents[index].classList.add('active');
-            currentTab = index;
-        }
-
-        tabBtns.forEach((btn, index) => {
-            btn.addEventListener('click', () => switchTab(index));
-        });
-
-        // Arrow navigation
-        document.getElementById('prevTab').addEventListener('click', () => {
-            const newIndex = (currentTab - 1 + tabBtns.length) % tabBtns.length;
-            switchTab(newIndex);
-        });
-
-        document.getElementById('nextTab').addEventListener('click', () => {
-            const newIndex = (currentTab + 1) % tabBtns.length;
-            switchTab(newIndex);
-        });
-
-        // ====== Featured Product Thumbnail Switching ======
-        document.querySelectorAll('.featured-thumbnails img').forEach(thumb => {
-            thumb.addEventListener('click', function() {
-                const parent = this.closest('.product-card');
-                const mainImg = parent.querySelector('.product-image img');
-
-                // Remove active from all thumbnails
-                parent.querySelectorAll('.featured-thumbnails img').forEach(t => t.classList.remove('active'));
-                // Add active to clicked thumbnail
-                this.classList.add('active');
-
-                // Change main image with fade effect
-                mainImg.style.opacity = '0';
-                setTimeout(() => {
-                    mainImg.src = this.src;
-                    mainImg.style.opacity = '1';
-                }, 200);
-            });
-        });
-
-        // ====== Image Slider ======
-        (function() {
-            var slides = document.querySelectorAll('.l_ads img');
-            var dots = document.querySelectorAll('.slider-dot');
-            var current = 0;
-            var total = slides.length;
-            var interval = 4000;
-
-            function showSlide(index) {
-                slides.forEach(function(slide) { slide.classList.remove('active'); });
-                dots.forEach(function(dot) { dot.classList.remove('active'); });
-                slides[index].classList.add('active');
-                dots[index].classList.add('active');
-                current = index;
-            }
-
-            function nextSlide() {
-                showSlide((current + 1) % total);
-            }
-
-            var timer = setInterval(nextSlide, interval);
-
-            dots.forEach(function(dot, idx) {
-                dot.addEventListener('click', function() {
-                    clearInterval(timer);
-                    showSlide(idx);
-                    timer = setInterval(nextSlide, interval);
-                });
-            });
-        })();
-    </script>
+<script src="./javascrpt/js.js"></script>
 </body>
 </html>
+     
