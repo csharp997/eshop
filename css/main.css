@@ -1036,3 +1036,45 @@
       transition: all 0.4s ease; direction: rtl;
     }
     .toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
+
+    .collectionlink{
+        display: flex;
+        text-decoration: none;
+        list-style: none;
+    }
+
+    .collectionitem{
+        width: 16.5%;
+        flex-grow: 1;
+    }
+
+    .collectiondetailitem{
+        background-color: #eee;
+        border: 1px solid transparent;
+        margin: 5px;
+        position: relative;
+
+    }
+     
+    .collectiondetailitem:hover{
+        border-color: #f4a137;
+        background-color: #fff;
+
+    }
+    .collectiondetaillink{
+        display: block;
+        border-bottom: solid 3px #f4a137;
+        position: relative;
+    }
+
+    .collectiondetailtitle{
+        position: absolute;
+        top: 5px;
+        right: 0;
+        display: block;
+        text-align: center;
+        font-weight: bold;
+        width: 100%;
+
+    }
+
