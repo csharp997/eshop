@@ -23,6 +23,7 @@
     .product-card.featured { grid-row: span 1; }
     .container-new-arrivals .products-track .product-card { min-width: calc(50% - 10px); }
     .section-header { flex-direction: column; align-items: flex-start; }
+    .container-special-sale .section-header { align-items: flex-start; }
     .collectionitem { width: 50%; }
     .submenu { position: static; opacity: 1; visibility: visible; transform: none; display: none; box-shadow: none; border-top: none; padding: 15px; min-height: auto; }
     .topnavitem:hover .submenu { display: block; }
@@ -69,6 +70,7 @@
     .nav-tabs { flex-direction: column; width: 100%; }
     .nav-tab { width: 100%; text-align: center; }
     .collectionitem { width: 100%; }
+    .container-special-sale { padding: 10px; }
 
 }
 
