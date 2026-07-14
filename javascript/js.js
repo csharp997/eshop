@@ -318,7 +318,42 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-function toggleWishlist(btn) {
-    btn.classList.toggle('active');
-    btn.innerHTML = btn.classList.contains('active') ? '&#9829;' : '&#9825;';
-}
+// ====== SPECIAL SALE SECTION EVENT DELEGATION ======
+document.addEventListener('DOMContentLoaded', function() {
+    const specialSaleGrid = document.querySelector('.special-sale-grid');
+    if (!specialSaleGrid) return;
+
+    specialSaleGrid.addEventListener('click', function(e) {
+        const btn = e.target.closest('button');
+        if (!btn) return;
+
+        // Add to Cart
+        if (btn.classList.contains('btn-cart')) {
+            e.preventDefault();
+            if (btn.classList.contains('added')) return;
+            btn.classList.add('added');
+            const originalHTML = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-check"></i> اضافه شد';
+            showToast('محصول به سبد خرید اضافه شد');
+            setTimeout(() => {
+                btn.classList.remove('added');
+                btn.innerHTML = originalHTML;
+            }, 2000);
+        }
+
+        // Wishlist
+        if (btn.classList.contains('btn-wishlist')) {
+            e.preventDefault();
+            btn.classList.toggle('active');
+            const isActive = btn.classList.contains('active');
+            btn.innerHTML = isActive ? '&#9829;' : '&#9825;';
+            showToast(isActive ? 'به لیست علاقه‌مندی‌ها اضافه شد' : 'از لیست علاقه‌مندی‌ها حذف شد');
+        }
+
+        // Compare
+        if (btn.classList.contains('btn-compare')) {
+            e.preventDefault();
+            showToast('محصول به لیست مقایسه اضافه شد');
+        }
+    });
+});
