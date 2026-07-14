@@ -789,8 +789,163 @@ body {
     color: #fff;
 }
 
+/* ====== HOT CATEGORIES ====== */
+.hotcategorys {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+    gap: 0;
+}
+
+.hotcategoryitem {
+    width: 25%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.hotcategorydetails {
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+    background: #fff;
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.hotcategorydetails:hover {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-color: #f4a137;
+}
+
+.hotcategoryimage {
+    position: relative;
+    overflow: hidden;
+}
+
+.hotcategoryimage img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.hotcategorydetails:hover .hotcategoryimage img {
+    transform: scale(1.05);
+}
+
+.hotcategoryimage .btn {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    text-decoration: none;
+    background-color: #f4a137;
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 3px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.hotcategoryimage .btn:hover {
+    background-color: #333;
+}
+
+.hotcategorydetails h4 {
+    margin: 0;
+    padding: 12px 15px 8px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #333;
+    border-bottom: 2px solid #f4a137;
+    display: inline-block;
+}
+
+.hotcategorydetails h4 a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.hotcategorydetails h4 a:hover {
+    color: #f4a137;
+}
+
+.hotcategorylist {
+    list-style: none;
+    margin: 0;
+    padding: 10px 15px 15px;
+    flex-grow: 1;
+}
+
+.hotcategorylist li {
+    margin-bottom: 6px;
+}
+
+.hotcategorylist li:last-child {
+    margin-bottom: 0;
+}
+
+.hotcategorylistlink {
+    color: #666;
+    text-decoration: none;
+    font-size: 13px;
+    display: block;
+    padding: 4px 0;
+    transition: all 0.2s ease;
+    position: relative;
+    padding-right: 12px;
+}
+
+.hotcategorylistlink::before {
+    content: "\f053";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 10px;
+    color: #f4a137;
+    transition: all 0.2s ease;
+}
+
+.hotcategorylistlink:hover {
+    color: #f4a137;
+    padding-right: 18px;
+}
+
+.hotcategorylistlink:hover::before {
+    right: 4px;
+}
+
+
+/* ====== BUTTON UTILITIES ====== */
+.btn_default {
+    background-color: #f4a137;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 3px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn_default:hover {
+    background-color: #333;
+}
+
 /* ====== FOOTER ====== */
 .footer {
     background: #232f3e; color: #bcbdc7;
     padding: 40px 20px 20px; border-radius: 0 0 5px 5px;
-
