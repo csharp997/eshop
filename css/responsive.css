@@ -8,6 +8,7 @@
     .container-new-arrivals .products-track .product-card { min-width: calc(33.333% - 14px); }
     .submenu-col { min-width: 150px; }
     .collectionitem { width: 33.33%; }
+    .special-sale-grid {grid-template-columns: repeat(2, 1fr);}
 }
 
 @media screen and (max-width: 768px) {
@@ -28,6 +29,11 @@
     .submenu-content { flex-direction: column; }
     .submenu-col { max-width: 100%; min-width: 100%; }
     .submenu-banner { min-height: 150px; }
+    .special-sale-grid {grid-template-columns: 1fr;}
+    .sale-card {padding: 12px;}
+    .sale-image {width: 80px;height: 80px;}
+    .sale-name {font-size: 13px;}
+    .sale-price {font-size: 14px;}
 }
 
 @media screen and (max-width: 600px) {
@@ -71,4 +77,9 @@
     .contactusicon, .carticon { padding: 5px; }
     .products-grid .product-image { height: 150px; }
     .featured-thumbnails img { width: 35px; height: 35px; }
+    .sale-card {flex-direction: column;text-align: center;}
+    .sale-image {width: 120px;height: 120px;}
+    .sale-rating {justify-content: center;}
+    .sale-actions {justify-content: center;}
+    .btn-compare {margin-top: 0;}
 }

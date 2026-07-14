@@ -316,3 +316,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+
+function toggleWishlist(btn) {
+    btn.classList.toggle('active');
+    btn.innerHTML = btn.classList.contains('active') ? '&#9829;' : '&#9825;';
+}
