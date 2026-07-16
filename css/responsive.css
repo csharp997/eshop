@@ -10,6 +10,8 @@
     .collectionitem { width: 33.33%; }
     .special-sale-grid {grid-template-columns: repeat(2, 1fr);}
     .hotcategoryitem { width: 33.333%; }
+    /* Footer */
+    .informationitems { width: 50%; min-width: 180px; }
 }
 
 @media screen and (max-width: 768px) {
