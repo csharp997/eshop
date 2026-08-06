@@ -83,6 +83,31 @@
     .hotcategoryimage img { height: 200px; }
 
 }
+  /* ====== RESPONSIVE ====== */
+        @media screen and (max-width: 540px) {
+            .register-card {
+                padding: 28px 20px;
+                border-radius: 0;
+                box-shadow: none;
+                max-width: 100%;
+            }
+            .register-main { padding: 0; align-items: flex-start; }
+            .register-header { padding: 12px 15px; }
+            .register-header .brand span { font-size: 1rem; }
+            .form-row { flex-direction: column; gap: 0; }
+        }
+  /* ====== RESPONSIVE ====== */
+        @media screen and (max-width: 480px) {
+            .login-card {
+                padding: 30px 20px;
+                border-radius: 0;
+                box-shadow: none;
+                max-width: 100%;
+            }
+            .login-main { padding: 0; align-items: flex-start; }
+            .login-header { padding: 12px 15px; }
+            .login-header .brand span { font-size: 1rem; }
+        }
 
 @media screen and (max-width: 400px) {
     .contactus, .cart { flex-direction: column; align-items: center; text-align: center; }

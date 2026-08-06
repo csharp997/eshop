@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ثبت‌نام در مارکت | فروشگاه اینترنتی</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://fonts.cdnfonts.com/css/iranian-sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="register-header">
+        <a href="index.html" class="brand">
+            <i class="fas fa-shopping-bag"></i>
+            <span>مارکت</span>
+        </a>
+        <a href="index.html" class="back-link">
+            <span>بازگشت به فروشگاه</span>
+            <i class="fas fa-arrow-left"></i>
+        </a>
+    </header>
+
+    <!-- MAIN -->
+    <main class="register-main">
+        <div class="register-card">
+            <div class="card-header">
+                <h1>ثبت‌نام در مارکت</h1>
+                <p>برای خرید و استفاده از خدمات، حساب کاربری بسازید</p>
+            </div>
+
+            <form id="registerForm" novalidate>
+                <!-- نام و نام خانوادگی -->
+                <div class="form-row">
+                    <div class="input-group">
+                        <label for="firstName">نام</label>
+                        <div class="input-wrapper">
+                            <input type="text" id="firstName" placeholder="مثال: علی" autocomplete="given-name">
+                            <i class="fas fa-user field-icon"></i>
+                        </div>
+                        <div class="error-msg" id="firstNameError">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <span>لطفاً نام خود را وارد کنید</span>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="lastName">نام خانوادگی</label>
+                        <div class="input-wrapper">
+                            <input type="text" id="lastName" placeholder="مثال: احمدی" autocomplete="family-name">
+                            <i class="fas fa-user field-icon"></i>
+                        </div>
+                        <div class="error-msg" id="lastNameError">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <span>لطفاً نام خانوادگی را وارد کنید</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ایمیل -->
+                <div class="input-group">
+                    <label for="emailInput">ایمیل</label>
+                    <div class="input-wrapper">
+                        <input type="email" id="emailInput" placeholder="example@mail.com" autocomplete="email">
+                        <i class="fas fa-envelope field-icon"></i>
+                    </div>
+                    <div class="error-msg" id="emailError">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <span>لطفاً یک ایمیل معتبر وارد کنید</span>
+                    </div>
+                </div>
+
+                <!-- موبایل -->
+                <div class="input-group">
+                    <label for="phoneInput">شماره موبایل</label>
+                    <div class="input-wrapper">
+                        <input type="tel" id="phoneInput" placeholder="09123456789" maxlength="11" autocomplete="tel" inputmode="numeric">
+                        <i class="fas fa-mobile-alt field-icon"></i>
+                    </div>
+                    <div class="hint-msg">
+                        <i class="fas fa-info-circle" style="font-size: 0.7rem;"></i>
+                        <span>برای اطلاع‌رسانی سفارشات استفاده می‌شود</span>
+                    </div>
+                    <div class="error-msg" id="phoneError">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <span>شماره موبایل باید ۱۱ رقم و با ۰۹ شروع شود</span>
+                    </div>
+                </div>
+
+                <!-- رمز عبور -->
+                <div class="input-group">
+                    <label for="passInput">رمز عبور</label>
+                    <div class="input-wrapper">
+                        <input type="password" id="passInput" class="has-toggle" placeholder="حداقل ۸ کاراکتر" autocomplete="new-password">
+                        <i class="fas fa-lock field-icon"></i>
+                        <button type="button" class="toggle-pass" onclick="togglePassword('passInput','eyeIcon1')" tabindex="-1" title="نمایش / پنهان کردن رمز عبور">
+                            <i class="fas fa-eye" id="eyeIcon1"></i>
+                        </button>
+                    </div>
+                    <div class="strength-bar" id="strengthBar">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                    <div class="strength-text" id="strengthText"></div>
+                    <div class="error-msg" id="passError">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <span>رمز عبور باید حداقل ۸ کاراکتر باشد</span>
+                    </div>
+                </div>
+
+                <!-- تکرار رمز عبور -->
+                <div class="input-group">
+                    <label for="confirmPassInput">تکرار رمز عبور</label>
+                    <div class="input-wrapper">
+                        <input type="password" id="confirmPassInput" class="has-toggle" placeholder="رمز عبور را تکرار کنید" autocomplete="new-password">
+                        <i class="fas fa-lock field-icon"></i>
+                        <button type="button" class="toggle-pass" onclick="togglePassword('confirmPassInput','eyeIcon2')" tabindex="-1" title="نمایش / پنهان کردن رمز عبور">
+                            <i class="fas fa-eye" id="eyeIcon2"></i>
+                        </button>
+                    </div>
+                    <div class="error-msg" id="confirmPassError">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <span>رمز عبور و تکرار آن یکسان نیستند</span>
+                    </div>
+                </div>
+
+                <!-- قوانین -->
+                <div class="terms-group">
+                    <input type="checkbox" id="termsCheck">
+                    <label for="termsCheck">
+                        <a href="#">شرایط استفاده</a> و <a href="#">قوانین حریم خصوصی</a> مارکت را مطالعه کرده و می‌پذیرم.
+                    </label>
+                </div>
+                <div class="error-msg" id="termsError" style="margin-top: -12px; margin-bottom: 12px;">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <span>پذیرش قوانین برای ثبت‌نام الزامی است</span>
+                </div>
+
+                <button type="submit" class="btn-primary" id="btnRegister">
+                    <span class="btn-text">ثبت‌نام</span>
+                    <span class="spinner"></span>
+                </button>
+            </form>
+
+            <div class="divider">یا</div>
+
+            <a href="login.html" class="btn-secondary">
+                <i class="fas fa-sign-in-alt"></i>
+                قبلاً ثبت‌نام کرده‌ام
+            </a>
+
+            <div class="form-footer">
+                <span>حساب کاربری دارید؟</span>
+                <a href="login.html">وارد شوید</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="register-footer">
+        <div>
+            <a href="#">پشتیبانی</a>
+            <a href="#">قوانین</a>
+            <a href="#">سوالات متداول</a>
+        </div>
+        <div style="margin-top: 8px;">
+            © 2026 مارکت. تمامی حقوق محفوظ است.
+        </div>
+    </footer>
+
+    <!-- TOAST -->
+    <div class="toast" id="toast"></div>
+
+<script src="./javascript/js-register.js"></script>
+</body>
+</html>
