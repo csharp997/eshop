@@ -401,10 +401,19 @@ function initCartActions() {
     updateCartDisplay();
 }
 
+function parsePrice(priceText) {
+    const faDigits = '۰۱۲۳۴۵۶۷۸۹';
+    const normalized = String(priceText)
+        .replace(/[۰-۹]/g, d => faDigits.indexOf(d))
+        .replace(/[^\d.]/g, '');
+    return parseFloat(normalized) || 0;
+}
+
 function addToCartStorage(productName, price) {
     const product = {
         name: productName.trim(),
         price: price,
+        priceNum: parsePrice(price),
         quantity: 1,
         id: Date.now()
     };
@@ -440,9 +449,15 @@ function addToCart(btn) {
 function updateCartDisplay() {
     const cartInfo = document.querySelector('.cartinfo span:last-child');
     const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+    const cartTotal = cart.reduce((sum, item) => sum + item.quantity * (item.priceNum || 0), 0);
 
     if (cartInfo) {
-        cartInfo.textContent = cartCount > 0 ? `${cartCount} محصول در سبد خرید` : 'سبد خرید خالی است';
+        if (cartCount > 0) {
+            const total = cartTotal.toLocaleString('fa-IR');
+            cartInfo.textContent = `${cartCount} محصول به مبلغ ${total} تومان`;
+        } else {
+            cartInfo.textContent = 'سبد خرید خالی است';
+        }
     }
 }
 
@@ -608,10 +623,10 @@ function showQuickViewModal(name, image, price) {
                     <div class="quick-view-price">${price}</div>
                     <p class="quick-view-desc">این یک محصول با کیفیت عالی است که برای شما انتخاب شده است.</p>
                     <div class="quick-view-actions">
-                        <button class="btn-add-cart" onclick="addToCartStorage('${name}', '${price}')">
+                        <button class="btn-add-cart">
                             <i class="fas fa-shopping-cart"></i> افزودن به سبد خرید
                         </button>
-                        <button class="btn-wishlist" onclick="toggleWishlistItem('${name}', this)">&#9825;</button>
+                        <button class="btn-wishlist">&#9825;</button>
                     </div>
                 </div>
             </div>
@@ -666,6 +681,9 @@ function showQuickViewModal(name, image, price) {
     }
 
     document.body.appendChild(modal);
+    // اتصال رویدادها بدون inline onclick (امنیت + پایداری)
+    modal.querySelector('.btn-add-cart').addEventListener('click', () => addToCartStorage(name, price));
+    modal.querySelector('.btn-wishlist').addEventListener('click', function() { toggleWishlistItem(name, this); });
     document.body.style.overflow = 'hidden';
 
     const closeModal = () => {
@@ -757,6 +775,7 @@ function showToast(message, type = 'success') {
     const toast = document.getElementById('toast');
     if (!toast) return;
     clearTimeout(toastTimeout);
+    toast.style.background = ''; // ریست رنگ قبل از هر نمایش
     toast.textContent = message;
     toast.classList.add('show');
 

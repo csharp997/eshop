@@ -1,0 +1,31 @@
+/* ============================================================
+   FIXES - اصلاحات دسترس‌پذیری و فوکوس (بعد از main.css لود شود)
+   ============================================================ */
+
+/* باز شدن ساب‌منو با کیبورد (Tab) - نه فقط hover */
+.topnavitem:focus-within .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+.topnavitem:focus-within > .topnavlink {
+    color: #fff !important;
+    background: #303e4f;
+    border-bottom-color: #f4a137;
+}
+
+/* استایل فوکوس واضح برای همه کنترل‌های تعاملی */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 2px solid #f4a137;
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+/* حذف outline پیش‌فرض مرورگر وقتی focus-visible پشتیبانی می‌شود */
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible) {
+    outline: none;
+}
